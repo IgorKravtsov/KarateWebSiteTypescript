@@ -1,0 +1,14 @@
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  min-width: 200px;
+  color: var(--btn-primary-text);
+}
+
+.filled {
+  background-color: var(--btn-background-primary);
+}
+
+.outline {
+  border: red 4px solid;
+}
