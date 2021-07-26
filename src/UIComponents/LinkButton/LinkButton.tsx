@@ -1,4 +1,4 @@
-import React, {FC} from 'react'
+import React, { FC } from 'react'
 import cn from 'classnames';
 
 import styles from './LinkButton.module.scss';
@@ -6,25 +6,21 @@ import { Link } from 'react-router-dom';
 
 export interface ILinkButton {
     onClickHandle?: (e:React.ButtonHTMLAttributes<HTMLButtonElement>) => void;
-    text: string;
     view?: 'filled' | 'outline';
     to: string;
+    children?: React.ReactNode;
 }
 
 
-const LinkButton:FC<ILinkButton> = ({text, view='filled', to}) => {
+const LinkButton:FC<ILinkButton> = ({view='filled', to, children}) => {
 
   return (
       <div className={cn(styles.btn, {
             [styles.filled]: view === "filled",
             [styles.outline]: view === "outline"
         })}>
-            <Link to={to}>{text}</Link>
+            <Link className={cn(styles.btn__link)} to={to}>{children}</Link>
       </div>
-
-        // <button className={}>
-        //     {text}
-        // </button>
   )
 };
 

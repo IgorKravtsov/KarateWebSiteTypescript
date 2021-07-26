@@ -2,7 +2,13 @@
   display: inline-block;
   text-decoration: none;
   min-width: 200px;
-  color: var(--btn-primary-text);
+  border-radius: 6px;
+  padding: 10px;
+  text-align: center;
+  &__link {
+    text-decoration: none;
+    color: #fff;
+  }
 }
 
 .filled {
@@ -10,5 +16,6 @@
 }
 
 .outline {
-  border: red 4px solid;
+  border: 3px solid #e43d4e;
+  box-sizing: border-box;
 }

@@ -1,12 +1,13 @@
 import React from 'react';
 import LinkButton from "./UIComponents/LinkButton/LinkButton";
+import styles from './app.module.scss';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <LinkButton text="filled!" view="filled" to="#"/>
-      <LinkButton text="filled2!" view="filled" to="#"/>
-      <LinkButton text="outline!" view="outline" to="#"/>
+    <div className={styles.app}>
+      <LinkButton view="filled" to="#">filled1</LinkButton>
+      <LinkButton view="filled" to="#">filled2</LinkButton>
+      <LinkButton view="outline" to="#">outlined</LinkButton>
     </div>
   );
 }
