@@ -1,21 +1,30 @@
+.link {
+  text-decoration: none;
+  font-weight: 700;
+  transition: .2s all;
+  color: #fff;
+
+  &:hover {
+    color: var(--primary-front-color);
+  }
+}
+
 .btn {
   display: inline-block;
   text-decoration: none;
   min-width: 200px;
-  border-radius: 6px;
-  padding: 10px;
+  border-radius: 3px;
   text-align: center;
-  &__link {
-    text-decoration: none;
-    color: #fff;
-  }
-}
-
-.filled {
-  background-color: var(--btn-background-primary);
-}
-
-.outline {
-  border: 3px solid #e43d4e;
+  padding: 20px 60px;
+  transition: .2s all;
+  border: 2px solid #e43d4e;
   box-sizing: border-box;
+  &__filled {
+    background-color: var(--primary-front-color);
+    &:hover {
+      background-color: var(--primary-background-color);
+      border: 2px solid #e43d4e;
+      box-sizing: border-box;
+    }
+  }
 }

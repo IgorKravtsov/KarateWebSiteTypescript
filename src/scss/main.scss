@@ -1,0 +1,16 @@
+:root {
+  //--btn-background-primary: #fec303;
+  --btn-primary-text: #171717;
+  --primary-background-color: #13182a;
+  --primary-front-color: #E43D4E;
+}
+@import "./fonts/fonts";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+}
+
+@import "helpers";
