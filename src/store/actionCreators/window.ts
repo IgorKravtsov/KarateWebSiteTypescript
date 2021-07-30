@@ -11,6 +11,14 @@ export const getWindowOffset = () => {
     };
 };
 
+export const setWindowOffset = () => {
+    return(dispatch: Dispatch<WindowAction>) => {
+        dispatch({
+            type: WindowActionTypes.SET_WINDOW_OFFSET_TO_ZERO
+        })
+    }
+}
+
 export const setWindowOffsetToZero = () => {
     return (dispatch: Dispatch<WindowAction>) => {
         dispatch({type: WindowActionTypes.SET_WINDOW_OFFSET_TO_ZERO});

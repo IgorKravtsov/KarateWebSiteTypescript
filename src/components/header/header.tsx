@@ -13,8 +13,10 @@ const Header = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(getWindowOffset())
-    }, [windowOffset])
+        dispatch(getWindowOffset());
+        console.log(windowOffset);
+        console.log(window.scrollY);
+    }, [window])
 
     return (
         <header className={styles.header}>
