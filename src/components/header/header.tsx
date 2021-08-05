@@ -1,25 +1,28 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import styles from './header.module.scss';
 import {Link} from 'react-router-dom';
 import LinkButton from "../../UIComponents/LinkButton/LinkButton";
 import Container from "../../UIComponents/Container/Container";
-import {useTypedSelector} from "../../hooks/UseTypedSelector";
-import {useDispatch} from "react-redux";
-import {getWindowOffset} from "../../store/actionCreators/window";
+import cn from "classnames";
 
 
 const Header = () => {
-    const {windowOffset} = useTypedSelector(state => state.window);
-    const dispatch = useDispatch();
 
-    useEffect(() => {
-        dispatch(getWindowOffset());
-        console.log(windowOffset);
-        console.log(window.scrollY);
-    }, [window])
+    const [scroll, setScroll] = React.useState(0);
+
+    const handleScroll = () => {
+        setScroll(window.scrollY);
+    };
+
+    React.useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, [scroll]);
 
     return (
-        <header className={styles.header}>
+        <header className={cn(styles.header, {
+            [styles.header__scrolled]: scroll > 10,
+        })}>
             <Container>
                 <div className={styles.header__wrapper}>
                     <Link to={'/'}>

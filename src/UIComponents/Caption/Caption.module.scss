@@ -1,0 +1,46 @@
+.caption {
+  display: flex;
+  flex-direction: column;
+
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 50px;
+  text-transform: uppercase;
+  color: var(--additional-front-color);
+  cursor: default;
+
+  h1 {
+    font-size: 40px;
+  }
+  span {
+    color: var(--primary-front-color);
+  }
+
+  &__left {
+    align-items: flex-start;
+  }
+
+  &__center {
+    align-items: center;
+  }
+
+  &__divider {
+    display: block;
+    height: 5px;
+    background-color: var(--primary-front-color);
+    margin-top: 20px;
+
+    &__long {
+      width: 110px;
+
+    }
+
+    &__short {
+      width: 60px;
+    }
+  }
+}
+
+.inline {
+  display: inline;
+}

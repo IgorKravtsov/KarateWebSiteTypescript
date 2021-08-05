@@ -1,0 +1,108 @@
+.accordion {
+
+  &__question {
+    padding: 10px;
+    &_button {
+      width: 100%;
+      display: grid;
+      grid-template-columns: .1fr 4fr .3fr;
+      text-align: left;
+      border: none;
+      background-color: var(--primary-background-color);
+      padding: 30px;
+      cursor: pointer;
+      color: darkgray;
+      letter-spacing: 1px;
+      transition: .3s all;
+
+      &::before {
+        content: url(../images/pencil.svg);
+        margin-right: 1em;
+      }
+
+      &::after {
+        content: url(../images/plus.svg);
+        margin-left: 2em;
+        //margin-right: 17px;
+        //transform: rotate(90deg);
+
+      }
+      &:hover {
+        background-color: var(--primary-front-color);
+        color: var(--additional-front-color);
+        &::after {
+          content: url("../images/plus_white.svg");
+        }
+        &:before {
+          content: url("../images/pencil_white.svg");
+        }
+      }
+      &_active {
+        background-color: var(--primary-front-color);
+        color: var(--additional-front-color);
+        &::after {
+          content: url("../images/minus_white.svg");
+        }
+        &:before {
+          content: url("../images/pencil_white.svg");
+        }
+        &:hover {
+          &::after {
+            content: url("../images/minus_white.svg");
+          }
+        }
+      }
+    }
+  }
+
+  &__answer {
+    cursor: default;
+    width: 100%;
+    //padding: 0 45px;
+    font-size: 18px;
+    color: var(--additional-front-color);
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 28px;
+    //display: none;
+    overflow: hidden;
+    height: 0;
+    transition: padding .3s;
+    //transition: height 20s;
+  }
+}
+
+.show {
+  //animation: show .8s infinite;
+  //max-height: 100%;
+  padding: 45px;
+  height: 100%;
+  //display: block;
+}
+
+@keyframes show {
+  0% {
+    padding: 45px;
+    height: 0;
+  }
+  50% {
+    height: 50%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+
+@keyframes hide {
+  0% {
+    padding: 0;
+    height: 100%;
+  }
+  50% {
+    height: 50%;
+  }
+  100% {
+    height: 100%;
+  }
+}

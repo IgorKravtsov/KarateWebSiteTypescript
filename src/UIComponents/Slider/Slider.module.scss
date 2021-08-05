@@ -1,0 +1,30 @@
+.slider {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__image {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+  }
+}
+
+.left_arrow {
+  position: absolute;
+  top: 50%;
+  left: 36px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.right_arrow {
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  z-index: 10;
+  cursor: pointer;
+}

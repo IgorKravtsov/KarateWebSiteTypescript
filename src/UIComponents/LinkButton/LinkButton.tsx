@@ -20,9 +20,9 @@ const LinkButton:FC<ILinkButton> = (
             <Link
                 className={cn(styles.link)} to={to}>
                 <div
-                    className={cn(styles.btn, classes, {
+                    className={cn(styles.btn, {
                         [styles.btn__filled]: view === "filled"
-                    })}>{children}</div>
+                    }, classes)}>{children}</div>
             </Link>
 
     )

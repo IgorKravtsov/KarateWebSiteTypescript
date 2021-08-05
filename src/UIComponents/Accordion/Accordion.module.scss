@@ -1,0 +1,15 @@
+.accordion{
+
+  &__wrapper {
+    //background-color: var(--additional-background-color);
+    width: 500px;
+    //height: 1000px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+

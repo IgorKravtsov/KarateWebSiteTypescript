@@ -19,10 +19,11 @@
   transition: .2s all;
   border: 2px solid #e43d4e;
   box-sizing: border-box;
+  //font-size: 20px;
   &__filled {
     background-color: var(--primary-front-color);
     &:hover {
-      background-color: var(--primary-background-color);
+      background-color: transparent;
       border: 2px solid #e43d4e;
       box-sizing: border-box;
     }
