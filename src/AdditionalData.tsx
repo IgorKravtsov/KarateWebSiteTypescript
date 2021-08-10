@@ -64,7 +64,7 @@ export const slides: ISlide[] = [
             Добро пожаловать в <span><strong>школу карате</strong></span> киокушинкай
         </Caption>,
         subtitle: "Для засновника Кіокушинкай Масутацу Оями сенс Масутацу Оями сенс",
-        btn: <LinkButton to={'/'} classes={"fz22"}>Записаться на бесплатную тренировку</LinkButton>,
+        btn: <LinkButton to={'/'} classes={"fz22 animate__animated animate__zoomIn"}>Записаться на бесплатную тренировку</LinkButton>,
         image: process.env.PUBLIC_URL + "/img/sliderImages/promo_background1.jpg",
 
     },
@@ -73,7 +73,7 @@ export const slides: ISlide[] = [
             Добро пожаловать в <span><strong>школу карате</strong></span> киокушинкай
         </Caption>,
         subtitle: "Для засновника Кіокушинкай Масутацу Оями сенс Масутацу Оями сенс",
-        btn: <LinkButton to={'/'} classes={"fz22"}>Записаться на бесплатную тренировку</LinkButton>,
+        btn: <LinkButton to={'/'} classes={"fz22 animate__animated animate__zoomIn"}>Записаться на бесплатную тренировку</LinkButton>,
         image: process.env.PUBLIC_URL + "/img/sliderImages/promo_background.jpg",
     },
     {
@@ -81,7 +81,7 @@ export const slides: ISlide[] = [
             Добро пожаловать в <span><strong>школу карате</strong></span> киокушинкай
         </Caption>,
         subtitle: "Для засновника Кіокушинкай Масутацу Оями сенс Масутацу Оями сенс",
-        btn: <LinkButton to={'/'} classes={"fz22"}>Записаться на бесплатную тренировку</LinkButton>,
+        btn: <LinkButton to={'/'} classes={"fz22 animate__animated animate__zoomIn"}>Записаться на бесплатную тренировку</LinkButton>,
         image: process.env.PUBLIC_URL + "/img/sliderImages/promo_background2.jpg",
     },
 ]

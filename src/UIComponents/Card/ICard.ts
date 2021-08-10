@@ -1,4 +1,4 @@
-import React, {ReactElement} from "react";
+import React, {HTMLAttributes, ReactElement} from "react";
 
 export interface ISocialNetWork {
     svgElement: ReactElement;

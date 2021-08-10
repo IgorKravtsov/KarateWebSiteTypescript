@@ -14,12 +14,13 @@ const Accordion:FC<IAccordion> = (
         classes
     }) => {
 
-    const [activeIndex, setActiveIndex] = React.useState(1);
+    const [activeIndex, setActiveIndex] = React.useState(0);
 
     const renderedQuestionsAnswers = data.map((item, index) => {
         const isActive = index === activeIndex;
         return (
             <AccordionItem
+                key={index}
                 item={item}
                 index={index}
                 isActive={isActive}

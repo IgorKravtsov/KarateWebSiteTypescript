@@ -1,0 +1,23 @@
+.faq {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 1fr;
+}
+
+.img {
+  width: 1000px;
+  height: 1000px;
+}
+
+.section {
+  background-color: var(--primary-background-color);
+  //padding: 120px 0;
+  //padding: 60px 0;
+}
+
+.questions {
+
+  &__wrapper {
+    padding: 10%;
+  }
+}

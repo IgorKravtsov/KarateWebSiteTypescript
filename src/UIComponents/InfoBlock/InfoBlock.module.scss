@@ -1,0 +1,10 @@
+.infoBlock {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  &__back {
+    color: #1A2038;
+    position: relative;
+    z-index: 10;
+  }
+}

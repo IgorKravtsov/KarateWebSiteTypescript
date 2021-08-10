@@ -3,9 +3,13 @@ import styles from './Container.module.scss';
 import cn from "classnames";
 import {IContainer} from "./IContainer";
 
-const Container:FC<IContainer> = ({children}) => {
+const Container:FC<IContainer> = (
+    {
+        children,
+        ...props
+    }) => {
     return (
-        <div className={cn(styles.container)}>
+        <div className={cn(styles.container)} {...props}>
             {children}
         </div>
     )

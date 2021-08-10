@@ -6,8 +6,8 @@ import {Link} from "react-router-dom";
 
 
 const Card:FC<ICard> = ({
-    width=540,
-    height=720,
+    width=400,
+    height=540,
     children,
     classes,
     img,
@@ -21,7 +21,7 @@ const Card:FC<ICard> = ({
     })
     return (
         <div style={{width, height}} className={cn(styles.card, classes)}>
-            <Link to={linkTo ? linkTo : '/'}><img src={img} alt={"photo"} className={cn(styles.card__img)}/></Link>
+            <Link to={linkTo ? linkTo : '/'}><img src={img} alt={"trainer"} className={cn(styles.card__img)}/></Link>
             {/*<img src={img} alt={"photo"} className={cn(styles.card__img)}/>*/}
             <Link to={linkTo ? linkTo : '/'}><h2 className={cn(styles.card__title)}>{title}</h2></Link>
             <h3 className={cn(styles.card__subtitle)}>{subtitle}</h3>

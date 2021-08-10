@@ -10,6 +10,9 @@ import Accordion from '../../UIComponents/Accordion/Accordion'
 import Caption from "../../UIComponents/Caption/Caption";
 import UISlider from "../../UIComponents/UISlider/UISlider";
 import {slides, questionsAnswers} from "../../AdditionalData";
+import InfoSection from "../sections/infoSection/infoSection";
+import {Route, Switch} from "react-router";
+import HomePage from "../../pages/homePage/HomePage";
 
 
 const App = () => {
@@ -17,26 +20,10 @@ const App = () => {
         <>
             <div className={styles.app}>
                 <Header/>
-                <UISlider slides={slides}/>
-                <Container>
-                    {<Accordion data={questionsAnswers}/>}
-
-                    {/*<Caption*/}
-                    {/*    view={"center"}*/}
-                    {/*    dividerView={"short"}*/}
-                    {/*>Часто задаваемые <span>вопросы</span></Caption>*/}
-
-                    <Card img={process.env.PUBLIC_URL + '/img/photos/Dmitriy_Sergeevich.jpeg'}
-                          title={"Сотников Юрий Евгеньевич"}
-                          subtitle={"сенсей, 3 дан"}
-                          width={520}
-                          socialNetworks={socialNetworks}
-                    />
-
-                    {/*<LinkButton view="filled" to="#">filled1</LinkButton>*/}
-                    {/*<LinkButton view="filled" to="#">Записаться на бесплатную тренировку</LinkButton>*/}
-                    {/*<LinkButton view="outline" to="#">Связаться с нами</LinkButton>*/}
-                </Container>
+                <Switch>
+                    <Route path={"/"} component={HomePage} exact/>
+                </Switch>
+                {/*<Footer/>*/}
             </div>
         </>
     );
